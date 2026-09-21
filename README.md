@@ -42,8 +42,8 @@ struct Record {
 В бинарном (сериализованном) little-endian виде такая структура может выглядеть например так:
 
 ```
-18 00    aa bb cc dd    01 00 00 00    05 00    07 00    48 45 4c 4c 4f    53 4f 42 41 4b 45 4e
-LEN      CRC32C         opcode         klen     vlen     HELLO             SOBAKEN
+18 00 aa bb cc dd 01 00 00 00 05 00 07 00 48 45 4c 4c 4f 53 4f 42 41 4b 45 4e
+LEN   CRC32C      opcode      klen  vlen  HELLO          SOBAKEN
 ```
 
 * LEN (2 байта) - длина всей последующей части структуры = (0x18 = 4 + 4 + 2 + 2 + 5 + 7)
